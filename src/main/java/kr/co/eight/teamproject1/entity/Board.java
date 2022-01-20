@@ -15,9 +15,9 @@ public class Board extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int BOARD_NUMBER;
     @Column
-    private String title;
+    private String BOARD_TITLE;
     @Column
-    private String content;
+    private String BOARD_CONTENT;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
