@@ -5,24 +5,20 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(exclude = "writer")
-public class Board extends BaseEntity {
+@Getter
+@ToString(exclude = "board")
+public class Reply extends BaseEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int BOARD_NUMBER;
-    @Column
-    private String title;
-    @Column
-    private String content;
-
+    private Long rno;
+    private String text;
+    private String replyer;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Member writer;
-
-
+    private Board board;
 
 }

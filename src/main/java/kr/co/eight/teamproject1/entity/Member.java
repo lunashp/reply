@@ -3,6 +3,7 @@ package kr.co.eight.teamproject1.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -32,4 +33,8 @@ public class Member extends BaseEntity{
 
     @Column(length = 600)
     private  String MEMBER_ADDRESS;
+
+    @OneToMany
+    private List<Board> board;
+
 }
