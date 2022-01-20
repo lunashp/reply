@@ -13,11 +13,17 @@ import javax.persistence.*;
 public class Board extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int BOARD_NUMBER;
+    private Long BOARD_NUMBER;
     @Column
     private String BOARD_TITLE;
     @Column
     private String BOARD_CONTENT;
+//    @Column
+//    private String BOARD_IP;
+    @Column
+    private String BOARD_NICKNAME;
+    @Column
+    private Long BOARD_READCNT;
 
 
     @ManyToOne(fetch = FetchType.LAZY)

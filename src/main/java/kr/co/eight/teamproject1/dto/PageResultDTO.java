@@ -1,7 +1,10 @@
 package kr.co.eight.teamproject1.dto;
 
-import java.util.List;
+import lombok.Data;
+import org.springframework.data.domain.Page;
 
+import java.util.List;
+@Data
 public class PageResultDTO <DTO, EN> {
 
     private List<DTO> dtoList;
@@ -11,4 +14,8 @@ public class PageResultDTO <DTO, EN> {
     private int size;
 
     private boolean prev, next;
+
+    private List<Integer> pageList;
+
+    private Page<EN> result;
 }
