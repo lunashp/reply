@@ -26,4 +26,7 @@ abstract public class BaseEntity {
     @Column(name = "BOARD_WRITEDATE")
     private LocalDateTime BOARD_WRITEDATE;
 
+    @LastModifiedDate
+    @Column(name = "REPLY_WRITHDATE")
+    LocalDateTime REPLY_WRITHDATE;
 }
